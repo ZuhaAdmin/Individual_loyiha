@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>O'quvchilar</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS/index_f.css' %}">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/versions.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/custom.css' %}">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="{% static 'JS/modernizer.js' %}"></script>
+	<style>
+		.column, .row:after {
+box-sizing: border-box;
+}
+
+.sarlavha {
+	background-color: #F4CA16;
+	border: solid 1px black;
+	border-radius: 50px;
+	padding: 30px;
+	width: 280px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+float: left;
+width: 50%;
+padding: 20px;
+height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.border {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	border: outset 2px;
+}
+
+.imag {
+	width: 30%;
+	float: left;
+	margin-right: 40px;
+	border: 1px solid darkblue;
+	border-radius: 50%;
+}
+
+.inform {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.title_x {
+	width: 80%;
+	border: solid 1px #F4CA16;
+	font-size: 30px;
+	font-family: elephant;
+	text-align: center;
+}
+
+.copy h1 {
+	font-family: italic;
+	position: relative;
+	top: 80px;
+	left: 20px;
+}
+
+.copy span {
+	font-family: broadway;
+}
+
+	</style>
+</head>
+<body>
+
+	<header>
+		
+		<div class="head">
+			<div class="logo">
+				<img src="{% static 'img/16-16-14-logo_litsey.png' %}">	
+			</div>
+
+			<div class="title_x">
+				<h1 style="font-size: 60px; font-weight: bolder;"><i>Xususiy Maktab</i></h1>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="menu-list"><a href="{% url 'asosiysahifa' %}">Asosiy bo'lim</a></div>
+			<div class="menu-list"><a href="{% url 'rahbariyat' %}">Rahbariyat</a></div>
+			<div class="menu-list"><a href="{% url 'oqituvchilar' %}">O'qituvchilar</a></div>
+			<div class="menu-list"><a href="{% url 'sinflar' %}">Sinflar</a></div>
+			<div class="menu-list"><a href="{% url 'oquvchilar' %}"><font color="#F4CA16">O'quvchilar</font></a></div>
+		</div>
+
+	</header>
+
+	<content>
+
+		<div class="all-title-box" style="background-image: url({% static 'img/attainment-gap-banner-950x300.jpg' %});">
+			<div class="container text-center">
+				<h1 style="color: black; ">O'quvchilar bo'limi</h1>
+			</div>
+		</div>
+
+        <div id="overviews" class="section wb">
+            <div class="container">
+                <div class="section-title row text-center">
+                    <!-- <div class="col-md-8 offset-md-2">
+                        <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                    </div> -->
+                </div><!-- end title -->
+    
+                <hr class="invis"> 
+    
+                <div class="row"> 
+                    {% for oquvchi in pupils %}
+                    <div class="col-lg-4 col-md-6 col-12" style="margin-bottom: 30px;">
+                        <div class="blog-item">
+                            <div class="image-blog">
+                                <img src="{{ oquvchi.image.url }}" alt="" class="img-fluid">
+                            </div>
+                            <div class="meta-info-blog">
+                                <span><i class="fa fa-calendar"></i> <a href="#"><b style="color: black;">Tug'ilgan sanasi:</b> <br>{{ oquvchi.birthday }}</a> </span>
+                                <span><i class="fa fa-tag"></i>  <a href="#"><b style="color: black;">Sinfi:</b> <br>{{ oquvchi.class_name }}</a> </span>
+                                <span><i class="fa fa-comments"></i> <a href="#"><b style="color: black;">Telefon raqami:</b> <br>{{ oquvchi.phone }}</a></span>
+                            </div>
+                            <div class="blog-title">
+                                <h2><a href="#" title="">{{ oquvchi.name }}</a></h2>
+                            </div>
+                            <div class="blog-desc">
+                                <p>Manzili: {{ oquvchi.adress }} </p>
+                            </div>
+                            <div class="blog-button">
+                                <a class="hover-btn-new orange" href="#"><span>Ko'proq o'qish<span></a>
+                            </div>
+                        </div>
+                    </div><!-- end col -->
+                    {% endfor %}
+                    
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+		
+
+	</content>
+
+
+	<footer>
+
+		<div class="map">
+			<h2>Manzil:</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11988.500171588072!2d69.282728!3d41.3061433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7f41a909e6e5a8f!2z0JDQutCw0LTQtdC80LjRh9C10YHQutC40Lkg0LvQuNGG0LXQuSDQv9GA0Lgg0JzQtdC20LTRg9C90LDRgNC-0LTQvdC-0Lwg0JLQtdGB0YLQvNC40L3RgdGC0LXRgNGB0LrQvtC8INGD0L3QuNCy0LXRgNGB0LjRgtC10YLQtSDQsiDQotCw0YjQutC10L3RgtC1!5e0!3m2!1sru!2s!4v1619645032631!5m2!1sru!2s" width="15%" height="100pc" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+
+		<div class="foot">
+			<div class="copy">
+				<h1 style="color: white; font-size: 30px; font-weight: bolder;"><span>Developer:</span> Abdumo'minov Zuhriddin &copy;</h1>
+			</div>
+
+			<div class="icons">
+				<a href=""><img src="{% static 'img/21-15-26-1024px-Telegram_logo.svg.png' %}" title="Telegram kanali"></a>
+				<a href=""><img src="{% static 'img/21-15-49-1024px-Instagram_icon.png' %}" title="Instagram kanali"></a>
+				<a href=""><img src="{% static 'img/21-16-20-1200px-Facebook_icon.svg.png' %}" title="Facebook kanali"></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

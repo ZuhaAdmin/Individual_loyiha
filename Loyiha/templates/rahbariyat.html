@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Rahbariyat</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS/index_f.css' %}">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/versions.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/custom.css' %}">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="{% static 'JS/modernizer.js' %}"></script>
+	<style>
+		.column, .row_x:after {
+box-sizing: border-box;
+}
+
+.sarlavha {
+	background-color: #F4CA16;
+	border: solid 1px black;
+	border-radius: 50px;
+	padding: 30px;
+	width: 280px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+float: left;
+width: 50%;
+padding: 20px;
+height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.border {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	/* border: outset 2px; */
+}
+
+.imag {
+	width: 39%;
+	float: left;
+	margin-right: 40px;
+	border: 1px solid darkblue;
+	border-radius: 50%;
+}
+
+.inform {
+	font-size: 23px;
+	font-weight: bold;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row_x:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.title_x {
+	width: 80%;
+	border: solid 1px #F4CA16;
+	font-size: 30px;
+	font-family: elephant;
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+
+	<header>
+		
+		<div class="head">
+			<div class="logo">
+				<img src="{% static 'img/16-16-14-logo_litsey.png' %}">	
+			</div>
+
+			<div class="title_x">
+				<h1 style="font-size: 60px; font-weight: bolder;"><i>Xususiy Maktab</i></h1>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="menu-list"><a href="{% url 'asosiysahifa' %}">Asosiy bo'lim</a></div>
+			<div class="menu-list"><a href="{% url 'rahbariyat' %}"><font color="#F4CA16">Rahbariyat</font></a></div>
+			<div class="menu-list"><a href="{% url 'oqituvchilar' %}">O'qituvchilar</a></div>
+			<div class="menu-list"><a href="{% url 'sinflar' %}">Sinflar</a></div>
+			<div class="menu-list"><a href="{% url 'oquvchilar' %}">O'quvchilar</a></div>
+		</div>
+
+	</header>
+
+	<!-- <content>
+		
+		<div class="main">
+			<div class="yangilik">
+				<h1>So'ngi Yangiliklar</h1>
+
+				<div class="yangilik1">
+					<p>
+						<img src="../img/3a4f37d9254a2f0805c1bbc71742869a (1).jpg" align="left">
+						<span>Akademik litseyda yangi imkoniyatlar</span> Ma'lumki, Ichki ishlar organlariga kadrlarni tayyorlab berish maqsadida joylarda vazirlikka qarashli Akademik litseylar tashkil etilgan edi.
+
+						Bugungi kunda mazkur o'quv muassasalarida ichki ishlar organlari xodimlari uchun zarur bo'lgan dastlabki kasbiy bilim, yuksak vatanparvarlik va ma'naviy-axloqiy fazilatlarni shakllantirishni nazarda tutadigan idoraviy oliy ta'lim muassasalariga kirish uchun nomzodlarni maqsadli tayyorlash yo'lga qo'yilgan. O'tgan 3 yil davomida idoraviy akademik litseylarning pedagog va ishchi xodimlari hamda o'quvchilariga munosib shart-sharoitlar yaratish, moddiy-texnik bazasini mustahkamlash bo'yicha samarali ishlar olib borilmoqda.&nbsp;&nbsp;&nbsp;
+						<a href="https://iiv.uz/uz/news/akademik-litseyda-yangi-imkoniyatlar">Davomini o'qish</a>
+					</p>
+				</div><br><br>
+				<div class="yangilik1">
+					<p>
+						<img src="../img/21-13-08-KiCYKz13830322841773_l.jpg" align="right">
+						<span>Litseylar soni qisqartirilib, ta'lim sifati oshiriladi</span> Litseylarda ta'lim sifati ular faoliyatini takomillashtirish va zamonaviylashtirish hisobiga oshiriladi.
+
+						O'zbekiston akademik litseylarida o'quv jarayoni sifati va samaradorligini tubdan oshirish, ular sonini optimizatsiya qilish rejalashtirilmoqda. Prezidentning 14 martdagi "O'rta maxsus, kasb-hunar ta'limi muassasalari faoliyatini yanada takomillashtirish chora-tadbirlari to'g'risida"gi qarori litseylar faoliyatidagi tizimli muammolarni bartaraf etishga yo'naltirilgan.
+
+						Ayni paytda mamlakatda 1500 dan ziyodroq o'rta maxsus, kasb-hunar ta'limi muassasalari, jumladan 1411 ta kasb-hunar kolleji va oliy ta'lim muassasalari qoshida 144 ta akademik litsey faoliyat olib bormoqda. Akademik litseylarda aniq, tabiiy, ijtimoiy-gumanitar fanlar, xorijiy tillar hamda madaniyat va san'at yo'nalishlari bo'yicha, yangi pedagogik va informatsion texnologiyalar asosida zamonaviy o'quv-laboratoriya asbob-uskunalari bilan jihozlangan kabinetlarda yosh avlodga puxta bilim berilmoqda. Ushbu maskanlarni har yili o'rtacha 35 ming nafar yigit-qiz bitirib chiqmoqda.&nbsp;&nbsp;&nbsp;
+						<a href="https://www.uzavtoyul.uz/uz/post/litseylar-soni-qisqartirilib-talim-sifati-oshiriladi">Davomini o'qish</a>
+					</p>
+				</div><br><br>
+				<div class="yangilik1">
+					<p>
+						<img src="../img/_sXNgVSp5bkOKeYpec-OOS_2v-O9fTxH_medium.jpg" align="left">
+						<span>Akademik litsey o‘quvchilarining oliygohlarga kirish-kirmasligiga qarab o‘qituvchilarga rag‘bat yoki jarima qo‘llanadi</span> O‘zbekiston Respublikasi Vazirlar Mahkamasining «Akademik litseylarga umumiy o‘rta ta'lim o‘quvchilarini tanlab olish, o‘qishga qabul qilish, ularning o‘qishini ko‘chirish va o‘qishdan chetlatish tartibi to‘g‘risidagi nizomni tasdiqlash haqida»gi 2018 yil 23 martdagi 212-sonli qarori qabul qilindi.
+
+						Vazirlar Mahkamasining qaroriga binoan tasdiqlanayotgan Nizomga ko‘ra, akademik litseylar faoliyatiga oid bir qator yangiliklar joriy etilmoqda.&nbsp;&nbsp;&nbsp;
+						<a href="https://kun.uz/uz/80310676">Davomini o'qish</a>
+					</p>
+				</div><br><br>
+				<div class="yangilik1">
+					<p>
+						<img src="../img/era8l0w_OTZWnlRc1s7027yuMTM85znu_medium.jpg" align="right">
+						<span>Akademik litseylarga qabul DTM o‘tkazadigan test sinovlari orqali amalga oshiriladi
+						</span> Oliy va o‘rta maxsus ta'lim vazirligi xabariga ko‘ra, iqtidorli yoshlarni aniqlash, ularni akademik litseylarga saralab olish, chuqurlashtirilgan ta'lim dasturlari asosida o‘qitishga alohida e'tibor qaratiladi.
+
+						Akademik litsey o‘quvchilarining kamida bitta xorijiy tilni puxta o‘zlashtirib chiqishi uchun dars mashg‘ulotlariga yuqori malakali pedagoglar jalb qilinadi, zaruriy sharoitlar yaratiladi.
+
+						Shuningdek, akademik litseylarda umumta'lim fanlar soati hisobiga chuqurlashtirilgan fanlar soati oshiriladi hamda ularning ulushi kamida 50 foizga yetkaziladi.
+
+						Ta'lim bosqichlari uzluksizligini ta'minlash maqsadida OTMlarning turdosh ta'lim yo‘nalishlarida takroran o‘qitiladigan fanlar akademik litseylar o‘quv dasturidagi tegishli fanlar bilan unifikatsiya qilinadi.
+
+						&nbsp;&nbsp;&nbsp;
+						<a href="https://kun.uz/uz/news/2020/12/04/20212022-oquv-yilidan-akademik-litseylarga-qabul-dtm-tomonidan-otkaziladigan-test-sinovlari-orqali-amalga-oshiriladi">Davomini o'qish</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="elon">
+				<h1>E'lonlar</h1>
+				<div>
+					<h2 align="center">Diqqat E'lon!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div><br>
+				<div>
+					<h2 align="center">Diqqat E'lon!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div><br>
+				<div>
+					<h2 align="center">Diqqat E'lon!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div><br>
+				<div>
+					<h2 align="center">Diqqat E'lon!</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		 <div class="slayt">
+			
+		</div> -->
+
+	<!-- </content> -->
+
+	<content>
+		<div class="teachers" align="center" style="width: 100%; height: 300px; background-image: url({% static 'img/benefitsheader.jpg' %}); background-repeat: no-repeat;
+		background-size: cover;">
+			<h1 style="position: relative; top: 120px; font-size: 60px; font-weight: bolder;">Rahbariyat</h1>
+		</div>
+		
+		<div class="row_x">
+			{% for lead in objects %}
+		  <div class="column">
+			<div class="border" style="background-color: #4babb1;">
+				<div ><img class="imag" src="{{ lead.image.url }}" alt=""></div>
+				<p class="inform" style="color: white; font-size: 20px;
+				font-weight: bold;
+				font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+				margin-top: 20px;">FISH: <span style="color: #F4CA16;">{{ lead.name }}</span> <br> Lavozimi: <span style="color: #F4CA16;">{{ lead.position }}</span> <br> Yoshi: <span style="color: #F4CA16;">{{ lead.age }}</span> <br> Telefon raqami: <span style="color: #F4CA16;">{{ lead.phone }}</span> <br> Malumoti: <span style="color: #F4CA16;">{{ lead.level }}</span></p>
+			</div>
+		  </div>
+		  <!-- <div class="column" >
+			<div class="border" >
+				<div ><img class="imag" src="../Web dasturlash/Web/img/21-15-26-1024px-Telegram_logo.svg.png" alt=""></div>
+				<p class="inform">FISH: Abdumo'minov Zuhriddin <br> Lavozimi: Direktor <br> Yoshi: 19 <br> Telefon raqami: +998995504506 <br> Malumoti: Oliy</p>
+			</div>
+		  </div> -->
+		  {% endfor %}
+		</div>
+
+		
+
+	</content>
+
+	<footer>
+
+		<div class="map">
+			<h2>Manzil:</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11988.500171588072!2d69.282728!3d41.3061433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7f41a909e6e5a8f!2z0JDQutCw0LTQtdC80LjRh9C10YHQutC40Lkg0LvQuNGG0LXQuSDQv9GA0Lgg0JzQtdC20LTRg9C90LDRgNC-0LTQvdC-0Lwg0JLQtdGB0YLQvNC40L3RgdGC0LXRgNGB0LrQvtC8INGD0L3QuNCy0LXRgNGB0LjRgtC10YLQtSDQsiDQotCw0YjQutC10L3RgtC1!5e0!3m2!1sru!2s!4v1619645032631!5m2!1sru!2s" width="15%" height="100pc" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+
+		<div class="foot">
+			<div class="copy">
+				<h1 style="color: white; font-size: 30px; font-weight: bolder;"><span>Developer:</span> Abdumo'minov Zuhriddin &copy;</h1>
+			</div>
+
+			<div class="icons">
+				<a href=""><img src="{% static 'img/21-15-26-1024px-Telegram_logo.svg.png' %}" title="Telegram kanali"></a>
+				<a href=""><img src="{% static 'img/21-15-49-1024px-Instagram_icon.png' %}" title="Instagram kanali"></a>
+				<a href=""><img src="{% static 'img/21-16-20-1200px-Facebook_icon.svg.png' %}" title="Facebook kanali"></a>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

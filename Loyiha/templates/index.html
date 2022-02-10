@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="uz">
+<head>
+	<title>Xususiy Maktab</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'CSS/index_f.css' %}">
+	<style>
+		.title_x {
+	width: 80%;
+	border: solid 1px #F4CA16;
+	font-size: 30px;
+	font-family: elephant;
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+
+	<header>
+		
+		<div class="head">
+			<div class="logo">
+				<img src="{% static 'img/16-16-14-logo_litsey.png' %}">	
+			</div>
+
+			<div class="title_x">
+				<h1><i>Xususiy Maktab</i></h1>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="menu-list">
+				<a href="{% url 'asosiysahifa' %}"><font color="#F4CA16">Asosiy bo'lim</font></a>
+			</div>
+			<div class="menu-list"><a href="{% url 'rahbariyat' %}">Rahbariyat</a></div>
+			<div class="menu-list"><a href="{% url 'oqituvchilar' %}">O'qituvchilar</a></div>
+			<div class="menu-list"><a href="{% url 'sinflar' %}">Sinflar</a></div>
+			<div class="menu-list"><a href="{% url 'oquvchilar' %}">O'quvchilar</a></div>
+			<div class="header-bg">
+				<!-- <button id="btn-light">Light</button>
+				<button id="btn-dark">Dark</button> -->
+			</div>
+		</div>
+
+	</header>
+
+	<content>
+		
+		<div class="banner">
+			<h1>Maktab Binosi</h1>
+		</div><br><br>
+
+		<div class="slayder">
+			<h1>Maktab hayotidan lavhalar</h1>
+		</div>
+
+		<div class="imgs">
+			<div class="imgs1">
+				<div><img src="{% static 'img/istockphoto-466214619-612x612.jpg' %}"></div>
+				<div><img src="{% static 'img/primary-school-kids.jpeg.jpg' %}"></div>
+				<div><img src="{% static 'img/155002235-happy-students-giving-high-five-celebrating.webp' %}"></div>
+				<div><img src="{% static 'img/90504977-teenage-school-kids-smiling-to-camera-in-school-corridor.webp' %}"></div>
+			</div>
+
+			<div class="imgs2">
+				<div><img src="{% static 'img/rear-view-six-students-bachelor-s-campus-life-rhythm.jpg' %}"></div>
+				<div><img src="{% static 'img/istockphoto-539233431-612x612.jpeg' %}"></div>
+				<div><img src="{% static 'img/asian-young-business-people-are-embracing-each-other-photo.jpg' %}"></div>
+				<div><img src="{% static 'img/istockphoto-1225062688-612x612.jpg' %}"></div>
+			</div>
+		</div>
+
+		<div class="slayder">
+			<h1>So'ngi Maqolalar</h1>
+		</div>
+
+		<div class="maqola">
+			<p>
+				<span>Maktab taʼlimini rivojlantirish umumxalq harakatiga aylanishi zarur - </span> 
+				Oʻzbekiston Respublikasi Prezidenti Shavkat Mirziyoyev raisligida 23-avgust kuni xalq taʼlimi tizimini rivojlantirish, pedagoglarning malakasi va jamiyatdagi nufuzini oshirish, yosh avlod maʼnaviyatini yuksaltirish masalalariga bagʻishlangan videoselektor yigʻilishi boʻlib oʻtdi.
+				&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://xs.uz/uz/post/maktab-talimini-rivozhlantirish-umumkhalq-harakatiga-ajlanishi-zarur">To'liq o'qish</a>
+			</p>
+			<p>
+				<span>2800 dan ortiq o‘quvchi sababsiz dars qoldirgani aniqlandi — XTV - </span> 
+				O‘zbekistonning 10 minga yaqin maktablarida o‘tkazilgan ikki kunlik reydlarda 2832 nafar o‘quvchi darslarni sababsiz qoldirgani ma’lum bo‘ldi. XTV xabariga ko‘ra, ularning 507 nafari internet klublarda vaqt o‘tkazayotgani, 338 nafari esa bozorda savdo-sotiq, aravakashlik bilan shug‘ullanayotgani aniqlangan.
+				&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.gazeta.uz/oz/2021/10/14/pupils/">To'liq o'qish</a>
+			</p>
+			<p>
+				<span>«Bolani 6 yoshdan maktabga berishga shoshilmaslik lozim» — tibbiyot fanlari doktori - </span> 
+				Bolani 7 yoshga yetmasdan maktabga berish qanchalik to‘g‘ri? Bunday yoshda bolaning ruhiy va jismoniy holatida qanday o‘zgarishlar kuzatiladi? Maktab yoshidagi bolada qanday ko‘nikmalarni shakllantirish kerak? Tibbiyot fanlari doktori, professor Shoanvar Shomansurov ushbu savollarga javob berdi.
+				&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.gazeta.uz/oz/2021/08/16/aged-6/">To'liq o'qish</a>
+			</p>
+			<p>
+				<span>Maktablarni rag‘batlantirish uchun prezident sovrini ta’sis etiladi - 
+				</span> 
+				Chet tillari bo‘yicha eng yaxshi ko‘rsatkichlarga erishgan maktablarni rag‘batlantirish uchun prezident sovrini ta’sis etiladi. Unda tuman va shahar bosqichi g‘olibi 100 mln so‘m, viloyat bosqichida 1-o‘rinni qo‘lga kiritgan 250 mln so‘m va respublikada eng yaxshi maktab maqomiga erishgan muassasa 500 mln so‘m bilan taqdirlanadi.
+				&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.gazeta.uz/oz/2021/05/06/school/">To'liq o'qish</a>
+			</p>
+		</div>
+
+	</content>
+
+	<footer>
+
+		<div class="map">
+			<h2>Manzil:</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11988.500171588072!2d69.282728!3d41.3061433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7f41a909e6e5a8f!2z0JDQutCw0LTQtdC80LjRh9C10YHQutC40Lkg0LvQuNGG0LXQuSDQv9GA0Lgg0JzQtdC20LTRg9C90LDRgNC-0LTQvdC-0Lwg0JLQtdGB0YLQvNC40L3RgdGC0LXRgNGB0LrQvtC8INGD0L3QuNCy0LXRgNGB0LjRgtC10YLQtSDQsiDQotCw0YjQutC10L3RgtC1!5e0!3m2!1sru!2s!4v1619645032631!5m2!1sru!2s" width="15%" height="100pc" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+
+		<div class="foot">
+			<div class="copy">
+				<h1><span>Developer:</span> Abdumo'minov Zuhriddin &copy;</h1>
+			</div>
+
+			<div class="icons">
+				<a href="#"><img src="{% static 'img/21-15-26-1024px-Telegram_logo.svg.png' %}" title="Telegram kanali"></a>
+				<a href="#"><img src="{% static 'img/21-15-49-1024px-Instagram_icon.png' %}" title="Instagram kanali"></a>
+				<a href="#"><img src="{% static 'img/21-16-20-1200px-Facebook_icon.svg.png' %}" title="Facebook kanali"></a>
+			</div>
+		</div>
+
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>
